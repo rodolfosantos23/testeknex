@@ -25,7 +25,7 @@ class Pessoa extends Model {
     }
 
     /**
-     * Esquema da tabela, pode ser configurado os
+     * Esquema da tabela, pode ser configurado os campos, relations, etc
      * @returns Object
      */
     static get jsonSchema() {
