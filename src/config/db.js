@@ -5,7 +5,7 @@ const db = knex({
     connection: {
         database: 'nossaescola',
         user: 'root',
-        password: ''
+        password: '060262'
     },
 });
 
