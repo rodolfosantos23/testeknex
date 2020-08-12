@@ -26,7 +26,7 @@ class Pessoa extends Model {
             properties: {
                 id: { type: 'integer' },
                 nome: { type: 'string', minLength: 1, maxLength: 255 },
-                cpf: { type: 'string', minLength: 1, maxLength: 14 }
+                cpf: { type: 'string', minLength: 11, maxLength: 14 }
             }
         }
     }
