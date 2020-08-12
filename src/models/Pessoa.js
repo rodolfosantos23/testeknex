@@ -1,7 +1,7 @@
-const { Model } = require('objection');
-const db = require('../config/db');
+const { Model } = require('objection')
+const db = require('../config/db')
 
-Model.knex(db);
+Model.knex(db)
 
 /**
  * Pessoa Model
@@ -10,12 +10,12 @@ class Pessoa extends Model {
 
     // Nome da tabela
     static get tableName() {
-        return 'new_pessoa';
+        return 'new_pessoa'
     }
 
     // Primary Key
     static get idColumn() {
-        return 'id';
+        return 'id'
     }
 
     // Esquema da tabela
@@ -28,9 +28,9 @@ class Pessoa extends Model {
                 nome: { type: 'string', minLength: 1, maxLength: 255 },
                 cpf: { type: 'string', minLength: 1, maxLength: 14 }
             }
-        };
+        }
     }
 
 }
 
-module.exports = Pessoa;
+module.exports = Pessoa

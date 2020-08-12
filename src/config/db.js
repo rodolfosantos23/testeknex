@@ -1,4 +1,4 @@
-const knex = require('knex');
+const knex = require('knex')
 
 const db = knex({
     client: 'mysql',
@@ -7,6 +7,6 @@ const db = knex({
         user: 'root',
         password: '060262'
     },
-});
+})
 
-module.exports = db;
+module.exports = db

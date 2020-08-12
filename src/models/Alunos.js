@@ -1,8 +1,8 @@
-const { Model } = require('objection');
-const db = require('../config/db');
-const Pessoa = require('../models/Pessoa');
+const { Model } = require('objection')
+const db = require('../config/db')
+const Pessoa = require('../models/Pessoa')
 
-Model.knex(db);
+Model.knex(db)
 
 /**
  * Aluno Model
@@ -11,12 +11,12 @@ class Alunos extends Model {
 
     // Nome da tabela
     static get tableName() {
-        return 'alunos';
+        return 'alunos'
     }
 
     // Primary Key
     static get idColumn() {
-        return 'alumatricula';
+        return 'alumatricula'
     }
 
     // Esquema da tabela
@@ -29,8 +29,8 @@ class Alunos extends Model {
                 alumatricula: { type: 'string', minLength: 1, maxLength: 50 },
                 ra: { type: 'string', minLength: 1, maxLength: 50 }
             },
-        };
-    };
+        }
+    }
 
     // Relations
     static relationMappings = {
@@ -39,8 +39,8 @@ class Alunos extends Model {
             modelClass: Pessoa,
             join: { from: 'alunos.pessoa_id', to: 'new_pessoa.id' }
         }
-    };
+    }
 
 }
 
-module.exports = Alunos;
+module.exports = Alunos
